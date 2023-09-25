@@ -82,7 +82,7 @@ echo "==============================================================="
 echo " Last run (showing only warnings)"
 echo "==============================================================="
 pdflatex -output-directory $buildDir $masterfilename.tex | grep "LaTeX Warning" > warnings.txt
-python3 /home/jennifer/scripts/latex/process-warnings.py
+python3 $path_to_current_folder/process-warnings.py
 rm warnings.txt
 
 cp "$buildDir/$masterfilename.pdf" "$mainDirectory"
